@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+		<script src="https://google-code-prettify.googlecode.com/svn/loader/prettify.js"></script>
+		<link rel="stylesheet" href="prettify.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div id="status"><span id="current-index"></span>/15</div>
+		<div class="main">
+			<div id="intro">
+				<h1 class="header">Tricky CSS Selectors Quiz</h1>
+				<input id="start-btn" type="button" value="Start!">
+				<div id="tip">
+					<p>If you're trying to select a multi-line element, just select the first tag!</p>
+				</div>
+				<p id="info"><a target="_blank" href="//www.codecademy.com/tracks/web">Don't know about CSS?</a></p>
+			</div>
+			<div id="end">
+				<h1 class="header">You passed the quiz!</h1>
+				<p>Follow <a href="//twitter.com/mdaverde">@mdaverde</a> for more projects (or to report errors)</p>
+			</div>
+			<div id="quiz">
+				<h1 class="question">h2 ~ p</h1>
+				<div class="answer">
+					<pre class="currentAnswer prettyprint lang-html linenums">
+&lt;h1 class="header"&gt;Welcome to the quiz&lt;/h1&gt;
+&lt;p&gt;This is a work in progress&lt;/p&gt;
+&lt;div class="about"&gt;
+  &lt;h2&gt;Why is this quiz going to help?&lt;/h2&gt;
+  &lt;p&gt;Challenge your CSS knowledge!&lt;/p&gt;
+  &lt;p&gt;Sometimes you forget how powerful CSS selectors are&lt;/p&gt;
+  &lt;p&gt;This project will go on github for beginners to learn&lt;/p&gt;
+&lt;/div&gt;</pre>
+				</div>
+				<div class="success">
+					<p>&#x2713;</p>
+				</div>
+			</div>
+		</div>
+		<!-- NEEDS TO CHANGE -->
+		<div class="hidden">
+			<pre type="text/html" class="prettyprint lang-html linenums">
+&lt;h1 class="sleepover"&gt;Sleeping News&lt;/h1&gt;
+&lt;h2&gt;A website dedicated to sleepovers&lt;/h2&gt;
+&lt;section&gt;
+  &lt;header&gt;
+    &lt;h1 class="work"&gt;Latest News&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;article class="bed pillow"&gt;
+    &lt;p&gt;How to take care of that snorer&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;article class="pillow-wet"&gt;
+    &lt;p&gt;When you wet the bed again&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;article class="pillow needed"&gt;
+    &lt;p&gt;Sleepwalker takes bad fall!&lt;/p&gt;
+  &lt;/article&gt;
+&lt;section&gt;</pre>
+			<pre type="text/html" class="prettyprint lang-html linenums">
+&lt;header&gt;
+  &lt;h1 class=&quot;soccer&quot;&gt;Soccer page&lt;/h1&gt;
+&lt;/header&gt;
+&lt;p class=&quot;soccer&quot;&gt;Welcome to my soccer page&lt;/p&gt;
+&lt;p&gt;Please look at my videos!&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;team.png&quot;&gt;
+  &lt;figcaption&gt;My current team&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;footer&gt;
+  &lt;p class=&quot;soccer&quot;&gt;Designed by Milan&lt;/p&gt;
+&lt;/footer&gt;</pre>
+			<pre type="text/html" class="prettyprint lang-html linenums">
+&lt;table&gt;
+  &lt;caption&gt;Student Ages&lt;/caption&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;student&quot;&gt;Tom&lt;/td&gt;
+      &lt;td class=&quot;student&quot;&gt;Suzie&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;student-age&quot;&gt;12&lt;/td&gt;
+      &lt;td class=&quot;student-age&quot;&gt;24&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+			<pre type="text/html" class="prettyprint lang-html linenums">
+&lt;section&gt;
+  &lt;article&gt;
+    &lt;p&gt;Read about the latest TV show?&lt;a&gt;Link here!&lt;/a&gt;&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;article&gt;
+    &lt;div&gt;
+      &lt;p&gt;If you're interested in news: &lt;a&gt;Click here!&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+&lt;/section&gt;
+&lt;section&gt;
+  &lt;article&gt;
+    &lt;p&gt;T-Shirts on sale now! Which one?&lt;a&gt;Find out!&lt;/a&gt;&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/section&gt;</pre>
+			<pre type="text/html" class="prettyprint lang-html linenums">
+  &lt;ul&gt;
+    &lt;li&gt;Events link drop-down&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Locations link drop-down&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Gallery&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Facebook&lt;/li&gt;
+  &lt;/ol&gt;</pre>
+			<pre type="text/html" class="prettyprint lang-html linenums">
+&lt;header&gt;
+  &lt;h1&gt;The Infamous Journal&lt;/h1&gt;
+  &lt;h2&gt;&lt;/h2&gt;
+&lt;/header&gt;
+&lt;div id=&quot;main&quot;&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Topics Include:&lt;/h1&gt;
+    &lt;h2&gt;Poetry, Music, and Drawing&lt;/h2&gt;
+  &lt;/header&gt;
+  &lt;h2&gt;&lt;/h2&gt;
+&lt;/div&gt;
+&lt;footer&gt;
+  &lt;h2&gt;&lt;/h2&gt;
+&lt;/footer&gt;</pre>
+			<pre type="text/html" class="prettyprint lang-html linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Test page&lt;/title&gt;
+  &lt;link href=&quot;style.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;main&quot;&gt;
+  &lt;h1&gt;The meaning of gestalt is....&lt;/h1&gt;
+  &lt;p&gt;The sum of parts is greater than the whole&lt;/p&gt;
+&lt;/div&gt;
+&lt;body&gt;
+&lt;/html&gt;
+</pre>
+			<pre type="text/html" class="prettyprint lang-html linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Test page&lt;/title&gt;
+  &lt;link href=&quot;style.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;container&quot;&gt;
+  &lt;header&gt;&lt;/header&gt;
+  &lt;nav&gt;
+  &lt;/nav&gt;
+  &lt;section id=&quot;main-content&quot;&gt;
+  &lt;/section&gt;
+  &lt;footer&gt;
+  &lt;/footer&gt;
+&lt;/div&gt;
+&lt;body&gt;
+&lt;/html&gt;</pre>
+			<pre type="text/html" class="prettyprint lang-html linenums">
+&lt;div id=&quot;wrapper&quot;&gt;
+  &lt;section class=&quot;intro&quot;&gt;
+    &lt;article&gt;
+      &lt;p&gt;The history of where you live...&lt;/p&gt;
+      &lt;p&gt;The weather in your area&lt;/p&gt;
+      &lt;p&gt;Lastest news in your zipcode!&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+&lt;/div&gt;</pre>
+			<pre type="text/html" class="prettyprint lang-html linenums">
+&lt;header&gt;
+  &lt;h1&gt;Example Company, Inc&lt;/h1&gt;
+&lt;/header&gt;
+&lt;div id=&quot;main&quot;&gt;
+&lt;/div&gt;
+&lt;footer&gt;
+  &lt;h1&gt;Copyright blabble...&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Top&lt;/li&gt;
+      &lt;li&gt;Center&lt;/li&gt;
+      &lt;li&gt;End&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+  &lt;li&gt;Unsemantic tag&lt;/li&gt;
+&lt;/footer&gt;</pre>
+			<pre type="text/html" class="prettyprint lang-html linenums">
+&lt;form method=&quot;POST&quot; action=&quot;script.php&quot;&gt;
+  &lt;lable for=&quot;name&quot;&gt;Username&lt;/lable&gt;
+  &lt;input type=&quot;text&quot; id=&quot;name&quot;&gt;
+
+  &lt;lable for=&quot;category&quot;&gt;Category&lt;/lable&gt;
+  &lt;input type=&quot;text&quot; id=&quot;category&quot; disabled&gt;
+
+  &lt;lable for=&quot;state&quot;&gt;State&lt;/lable&gt;
+  &lt;input type=&quot;text&quot; id=&quot;state&quot;&gt;
+
+  &lt;lable for=&quot;country&quot;&gt;Country&lt;/lable&gt;
+  &lt;input type=&quot;text&quot; id=&quot;country&quot; disabled&gt;
+
+  &lt;input type=&quot;submit&quot; id=&quot;name&quot;&gt;
+&lt;/form&gt;</pre>
+			<pre type="text/html" class="prettyprint lang-html linenums">
+&lt;section&gt;
+  &lt;article&gt;
+    &lt;h1&gt;How to tune your ukelele&lt;/h1&gt;
+    &lt;p&gt;Article published at &lt;time&gt;8:00 AM&lt;/time&gt;&lt;/p&gt;
+    &lt;p&gt;Article commented on at &lt;time&gt;8:02 AM&lt;/time&gt;&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;article&gt;
+    &lt;h1&gt;Ukelele gets stolen!&lt;/h1&gt;
+    &lt;p&gt;Article published at &lt;time&gt;8:00 AM&lt;/time&gt;&lt;/p&gt;
+  &lt;article&gt;
+&lt;section&gt;</pre>
+			<pre type="text/html" class="prettyprint lang-html linenums">
+&lt;section&gt;
+  &lt;article&gt;
+    &lt;h1&gt;n00b&lt;/h1&gt;
+    &lt;p&gt;When starting, some people might call you this&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;article&gt;
+    &lt;h1&gt;Developer&lt;/h1&gt;
+    &lt;a&gt;Link to how to become a better software developer&lt;/a&gt;
+  &lt;/article&gt;
+  &lt;article&gt;
+    &lt;h1&gt;CTO&lt;/h1&gt;
+    &lt;p&gt;This stands for Chief Technical Officer&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/section&gt;</pre>
+			<pre type="text/html" class="prettyprint lang-html linenums">
+&lt;div class=&quot;shopping list&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Ham&lt;/li&gt;
+    &lt;li&gt;Eggs&lt;/li&gt;
+    &lt;li&gt;Cheese&lt;/li&gt;
+    &lt;li&gt;Cups&lt;/li&gt;
+    &lt;li&gt;Wool Blanket&lt;/li&gt;
+    &lt;li&gt;Veggies&lt;/li&gt;
+    &lt;li&gt;Steak&lt;/li&gt;
+    &lt;li&gt;Birthday Cake&lt;/li&gt;
+    &lt;li&gt;Chicken&lt;/li&gt;
+    &lt;li&gt;Ice Cream&lt;/li&gt;
+    &lt;li&gt;Nacho Chips&lt;/li&gt;
+    &lt;li&gt;Salso&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+		</div>
+		<script type="text/javascript" src="components/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>
