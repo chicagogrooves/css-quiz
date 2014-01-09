@@ -1,7 +1,7 @@
 var util = {
 	checkArrayEquality : function(arr1, arr2){
-		if ( arr1.length != arr2.length ){ 
-			return false; 
+		if ( arr1.length != arr2.length ){
+			return false;
 		}
 
 		var equal = true;
@@ -18,6 +18,7 @@ var util = {
 var app = {
 	answers: [
 		[5,6,7],
+		[1,2,5,6,7],
 		[10],
 		[10,13],
 		[4,11],
@@ -37,6 +38,7 @@ var app = {
 
 	questions : [
 		"h2 ~ p",
+		"h2, p",
 		"section > h1",
 		"article[class|=\"pillow\"]",
 		".soccer:not(h1)",
@@ -112,7 +114,7 @@ var app = {
 				window.setTimeout(app.transition, 1000);
 			}
 		});
-	}, 
+	},
 
 	refreshQuestion : function(){
 		$(".question").text(app.questions[app.currentIndex]);
